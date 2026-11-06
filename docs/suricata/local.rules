@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"NETSENTINEL Possible Port Scan"; flags:S; threshold:type both, track by_src, count 20, seconds 5; sid:1000001; rev:1;)
